@@ -1,0 +1,63 @@
+/* Estilo general para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para las imágenes dentro de habitaciones */
+#habitaciones img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la lista de habitaciones*/
+#habitaciones ul {
+    list-style: none;         /* Quita los punticos de la lista */
+    padding: 0;
+    display: flex;            /* Coloca los elementos en fila */
+    gap: 20px;                /* Espacio entre las habitaciones */
+    flex-wrap: wrap;          /* Si no caben, bajan a la siguiente línea */
+    justify-content: center;  /* Centra las habitaciones */
+}
+
+#habitaciones li {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+/* Estilo para el titulo de la sección habitaciones */
+#habitaciones h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #006666;
+}
+
+/* Estilo general para los botones de la sección habitaciones */
+#habitaciones button {
+    margin-top: 10px;             /* Espacio hacia arriba para separarlo del texto */
+    padding: 8px 16px;            /* Relleno interno: 8px arriba/abajo, 16px a los lados */
+    background-color: #006666;    /* Color de fondo del botón */
+    color: white;                 /* Color del texto del botón */
+    border: none;                 /* Elimina el borde por defecto del navegador */
+    border-radius: 6px;           /* Bordes redondeados del botón */
+    cursor: pointer;              /* Cambia el cursor al pasar el mouse*/
+    font-weight: bold;            /* Texto en negrita para mayor presencia */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+/* Estilo cuando el usuario pasa el cursor sobre el botón */
+#habitaciones button:hover {
+    background-color: red;   /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+

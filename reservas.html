@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Hotel Paraiso</title>
+</head>
+<body>
+<h1>Registro Cliente</h1>
+
+<form>
+    <!-- Campo: Nombre -->
+    <label for="nombre">Nombre <span style="color:red;">(obligatorio)</span></label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <!-- Campo: Apellidos -->
+    <label for="apellidos">Apellidos <span style="color:red;">(obligatorio)</span></label>
+    <input type="text" id="apellidos" name="apellidos" required>
+
+        <!-- Campo: Correo electrónico -->
+    <label for="correo">Correo Electrónico <span style="color:red;">(obligatorio)</span></label>
+    <input type="email" id="correo" name="correo" required>
+
+    <!-- Campo: Documento -->
+    <label for="documento">Documento <span style="color:red;">(obligatorio)</span></label>
+    <input type="text" id="documento" name="documento" required>
+
+    <!-- Campo: Tipo de documento (T.D) -->
+    <label for="tipo-documento">Tipo de Documento</label>
+    <select id="tipo-documento" name="tipo-documento">
+        <option value="cedula">Cédula de Ciudadanía</option>
+        <option value="extranjeria">Cédula de Extranjería</option>
+        <option value="pasaporte">Pasaporte</option>
+        <option value="ti">Tarjeta de Identidad</option>
+    </select>
+
+        <!-- Campo: Ciudad -->
+    <label for="ciudad">Ciudad</label>
+    <input type="text" id="ciudad" name="ciudad" required>
+
+    <!-- Campo: Pais -->
+    <label for="pais">País</label>
+    <input type="text" id="pais" name="pais" required>
+
+    <!-- Campo: Teléfono móvil -->
+    <label for="telefono">Teléfono Móvil <span style="color: red;">(obligatorio)</span></label>
+    <input type="tel" name="telefono" id="telefono" required>
+
+    <label>
+        <input type="checkbox" required>
+        Acepto <a href="#">Términos y condiciones generales</a>,
+        <a href="#">Política de privacidad</a> y <a href="#">condiciones de reserva</a>
+    </label>
+
+    <button type="submit">Reservar</button>
+
+
+</form>
+
+    
+</body>
+</html>

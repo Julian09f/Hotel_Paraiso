@@ -1,25 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
     <title>Hotel paraiso</title>
 </head>
 <body>
     <header>
-        <nav>
-        <h1>Hotel Paraíso</h1>
-        <ul>
-            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-            <li><a href="#habitaciones">Habitaciones</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
-            <li><a href="#contacto">Contáctanos</a></li>                    
-            <li><button onclick="iniciarSesion()">Inicio de Sesión</button></li>
-            <li><button onclick="reservar()">Reservar Ahora</button></li>
-        </ul>
 
+        <h1>Hotel Paraíso</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#habitaciones">Habitaciones</a></li>
+            </ul>
         </nav>
+    
     </header>
+
+    <main>
+
+        <section id="sobre-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>Hotel Paraíso es un lugar donde la comodidad y el lujo se encuentran, con más de 50 habitaciones equipadas con todas las comodidades modernas. Contamos con 15 años de experiencia en el sector hotelario donde fomentamos colaboraciones duraderas e impulsamos el éxito comercial al centrarnos en lo que más les importa a nuestros huéspedes, empleados y socios. No importa dónde le lleve su viaje, Hotel Paraíso ofrece experiencias excepcionales. Explore nuestra historia, conozca a las personas responsables de nuestro éxito y descubra los valores que dan forma a quiénes somos hoy. </p>          
+        </section>
+
+        <section id="habitaciones">
+            <h2>Habitaciones</h2>
+            <ul>
+                <li> <img src="/images/habitacion-estandar.jpg" alt="Habitación Estándar">
+                    Estándar: Ideal para viajeros que buscan comodidad a buen precio.
+                    <button>Reservar</button>
+                </li>
+                <li> <img src="/images/habitacion-medium.jpg" alt="Habitación Medium">
+                    Medium: Una mezcla perfecta entre confort y estilo moderno.
+                    <button>Reservar</button>
+                </li>
+                <li> <img src="/images/habitacion-lujosa.jpg" alt="Habitación Premium">
+                    Premium: Máximo lujo y servicios exclusivos.
+                    <button>Reservar</button>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
     
 </body>
 </html>
