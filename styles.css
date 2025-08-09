@@ -60,4 +60,120 @@ body {
 }
 
 
+/* ======== Barra de navegación ======== */
+.navbar {
+    display: flex;                  /* Coloca los elementos (logo, menú, acciones) en una misma fila */
+    justify-content: space-between; /* Espacia los elementos: uno a la izquierda, uno al centro, uno a la derecha */
+    align-items: center;            /* Centra los elementos verticalmente */
+    padding: 0px 20px;              /* Espacio interno arriba/abajo y a los lados */
+    position: absolute;              /* La posiciona encima del contenido (sobre la imagen de fondo) */
+    top: 0;                          /* Pegada a la parte superior */
+    left: 0;                         /* Pegada a la izquierda */
+    width: 100%;                     /* Ocupa todo el ancho de la página */
+    background: transparent;         /* Fondo transparente (como en tu diseño) */
+    color: black;                    /* Color del texto y enlaces */
+    z-index: 1000;                    /* Asegura que quede por encima de otros elementos */
+}
 
+/* ======== Logo ======== */
+.logo img {
+    height: 40px;                    /* Tamaño fijo de la imagen del logo */
+}
+
+
+/* ======== Menú central ======== */
+
+/* ======== Botones ======== */
+.btn-login, .btn-reserva, .btn-sobre-nosotros {
+    padding: 8px 12px;                 /* Tamaño del botón */
+    border: none;                      /* Quita borde por defecto */
+    border-radius: 8px;                 /* Bordes redondeados */
+    cursor: pointer;                    /* Mano al pasar por encima */
+    font-weight: bold;                  /* Texto más visible */
+    
+}
+
+/* Estilo del botón de "Sobre Nosotros" */
+.btn-sobre-nosotros {
+    background-color: #c77b7b;          
+    color: white;  
+}
+
+/* Estilo del botón de inicio de sesión */
+.btn-login {
+    background-color: #c77b7b;          
+    color: white;                       
+}
+
+/* Estilo del botón de reservar ahora */
+.btn-reserva {
+    background-color: #d48d8d;
+    color: white;
+}
+
+/* ======== Icono menú ======== */
+/* Agrupador de los botones + hamburguesa */
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;           /* Separación entre botones */
+    position: relative;  /* Clave para que el menú desplegable se ancle aquí */
+}
+
+/* Icono de menú hamburguesa */
+.menu-icon {
+    font-size: 22px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+/* Menú desplegable anclado al .acciones */
+.menu-desplegable {
+    display: none;
+    position: absolute;   /* Se ancla respecto a .acciones */
+    top: calc(100% + 5px); /* Justo debajo del grupo de botones */
+    right: 0;              /* Pegado a la derecha de .acciones */
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 2000;
+}
+
+/* Mostrar menú al activar */
+.menu-desplegable.show {
+    display: block;
+}
+
+
+
+/* Hace que el header siempre quede arriba */
+header {
+    position: fixed;       /* Fija el header */
+    top: 0;                /* Pegado arriba */
+    left: 0;               /* Pegado a la izquierda */
+    width: 100%;           /* Ocupa todo el ancho */
+    background-color: #f8f8f8; /* Fondo para que el texto no se mezcle con el contenido */
+    padding: 10px 20px;    /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+    z-index: 1000;         /* Encima de todo */
+}
+
+/* Da espacio al contenido para que no se esconda debajo del header fijo */
+main {
+    padding-top: 100px; /* Ajusta según la altura de tu header */
+}
+
+.h1-sobre-nosotros {
+    text-align: center; /* Centra el título */
+    margin-top: 120px;   /* Espacio arriba */
+    color: #006666;     /* Color del texto */
+}
+
+.h1-registro{
+    text-align: center; /* Centra el título */
+    margin-top: 120px;   /* Espacio arriba */
+    color: #006666;     /* Color del texto */
+}

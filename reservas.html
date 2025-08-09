@@ -3,26 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Reservas - Hotel Paraiso</title>
 </head>
 <body>
-<h1>Registro Cliente</h1>
+
+<!-- Contenedor principal de la barra de navegación -->
+<header class="navbar">
+
+    <!-- Sección izquierda: Logo -->
+    <div class="logo">
+        <!-- Imagen del logo -->
+        <img src="/images/LOGO HJ.png" alt="Hotel Paraíso">
+    </div>
+
+    <!-- Sección derecha: Botones + menú -->
+    <div class="acciones">
+
+        <button class="btn-sobre-nosotros">SOBRE NOSOTROS</button>
+        <button class="btn-login">INICIO DE SESIÓN</button>
+        <button class="btn-reserva">RESERVAR AHORA</button>
+        <!-- Icono del menú -->
+        <div class="menu-icon">☰</div>
+        <!-- Menú desplegable que aparece al dar click -->
+        <div class="menu-desplegable">
+        <a href="sobre-nosotros.html">Sobre Nosotros</a>
+        <a href="login.html">Inicio de Sesión</a>
+        <a href="reservas.html">Reservar Ahora</a>
+        </div>
+
+    </div>
+
+</header>
+
+    <h1 class="h1-registro">Registro Cliente</h1>
 
 <form>
     <!-- Campo: Nombre -->
-    <label for="nombre">Nombre <span style="color:red;">(obligatorio)</span></label>
+    <label for="nombre">Nombre: *</label>
     <input type="text" id="nombre" name="nombre" required>
 
     <!-- Campo: Apellidos -->
-    <label for="apellidos">Apellidos <span style="color:red;">(obligatorio)</span></label>
+    <label for="apellidos">Apellidos: *</label>
     <input type="text" id="apellidos" name="apellidos" required>
 
         <!-- Campo: Correo electrónico -->
-    <label for="correo">Correo Electrónico <span style="color:red;">(obligatorio)</span></label>
+    <label for="correo">Correo Electrónico: *</label>
     <input type="email" id="correo" name="correo" required>
 
     <!-- Campo: Documento -->
-    <label for="documento">Documento <span style="color:red;">(obligatorio)</span></label>
+    <label for="documento">Documento: *</label>
     <input type="text" id="documento" name="documento" required>
 
     <!-- Campo: Tipo de documento (T.D) -->
@@ -43,7 +73,7 @@
     <input type="text" id="pais" name="pais" required>
 
     <!-- Campo: Teléfono móvil -->
-    <label for="telefono">Teléfono Móvil <span style="color: red;">(obligatorio)</span></label>
+    <label for="telefono">Teléfono Móvil: *</label>
     <input type="tel" name="telefono" id="telefono" required>
 
     <label>
@@ -57,6 +87,9 @@
 
 </form>
 
-    
+<script src="script.js"></script>
+
+
+
 </body>
 </html>
