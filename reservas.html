@@ -14,7 +14,9 @@
     <!-- Sección izquierda: Logo -->
     <div class="logo">
         <!-- Imagen del logo -->
-        <img src="/images/LOGO HJ.png" alt="Hotel Paraíso">
+        <a href="index.html">
+            <img src="/images/LOGO HJ.png" alt="Hotel Paraíso"> 
+        </a>
     </div>
 
     <!-- Sección derecha: Botones + menú -->
@@ -38,42 +40,42 @@
 
     <h1 class="h1-registro">Registro Cliente</h1>
 
-<form>
+    <section class="form-container">
+
+
+    <form>
     <!-- Campo: Nombre -->
     <label for="nombre">Nombre: *</label>
-    <input type="text" id="nombre" name="nombre" required>
-
     <!-- Campo: Apellidos -->
     <label for="apellidos">Apellidos: *</label>
+    <input type="text" id="nombre" name="nombre" required>
     <input type="text" id="apellidos" name="apellidos" required>
-
-        <!-- Campo: Correo electrónico -->
-    <label for="correo">Correo Electrónico: *</label>
-    <input type="email" id="correo" name="correo" required>
-
-    <!-- Campo: Documento -->
-    <label for="documento">Documento: *</label>
-    <input type="text" id="documento" name="documento" required>
-
     <!-- Campo: Tipo de documento (T.D) -->
     <label for="tipo-documento">Tipo de Documento</label>
-    <select id="tipo-documento" name="tipo-documento">
+    <!-- Campo: Documento -->
+    <label for="documento">Documento: *</label>
+        <select id="tipo-documento" name="tipo-documento">
         <option value="cedula">Cédula de Ciudadanía</option>
         <option value="extranjeria">Cédula de Extranjería</option>
         <option value="pasaporte">Pasaporte</option>
         <option value="ti">Tarjeta de Identidad</option>
     </select>
-
-        <!-- Campo: Ciudad -->
-    <label for="ciudad">Ciudad</label>
-    <input type="text" id="ciudad" name="ciudad" required>
-
+    <input type="text" id="documento" name="documento" required>
     <!-- Campo: Pais -->
     <label for="pais">País</label>
-    <input type="text" id="pais" name="pais" required>
-
-    <!-- Campo: Teléfono móvil -->
+    <!-- Campo: Ciudad -->
+    <label for="ciudad">Ciudad</label>
+    <select id="pais" name="pais">
+        <option value="colombia">Colombia</option>
+        <option value="venezuela">Venezuela</option>
+        <option value="ecuador">Ecuador</option>
+        <option value="peru">Perú</option>
+    <input type="text" id="ciudad" name="ciudad" required>
+        <!-- Campo: Correo electrónico -->
+    <label for="correo">Correo Electrónico: *</label>
+        <!-- Campo: Teléfono móvil -->
     <label for="telefono">Teléfono Móvil: *</label>
+    <input type="email" id="correo" name="correo" required>
     <input type="tel" name="telefono" id="telefono" required>
 
     <label>
@@ -82,14 +84,62 @@
         <a href="#">Política de privacidad</a> y <a href="#">condiciones de reserva</a>
     </label>
 
-    <button type="submit">Reservar</button>
+    <button class="btn-reservarFormulario" type="submit">Reservar</button>
+    
+    </form>
 
+    </section>
 
-</form>
+        <footer class="footer">
+    <div class="footer-container">
+
+        <!-- Columna 1 -->
+        <div class="footer-section">
+            <img src="/images/LOGO HJ.png" alt="Hotel Paraíso" class="footer-logo">
+            <button class="footer-btn">CONTACTANOS</button>
+            <div class="social-icons">
+                <a href="#"><img src="/images/facebook-logo.png" alt="Facebook"></a>
+                <a href="#"><img src="/images/linkedin-logo.png" alt="LinkedIn"></a>
+                <a href="#"><img src="/images/youtube-logo.jpg" alt="YouTube"></a>
+                <a href="#"><img src="/images/instagram-logo.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="footer-section">
+            <a href="https://www.google.com/maps/place/Medell%C3%ADn,+Antioquia" target="_blank">
+                <img src="/images/mapa-logo.jpg" alt="Mapa ubicación" class="mapa-img">
+            </a>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="footer-section">
+            <ul>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="https://www.google.com/maps/place/Medell%C3%ADn,+Antioquia" target="_blank">Ubicación</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="footer-section">
+            <ul>
+                <li><a href="#">Habitaciones</a></li>
+                <li><a href="#">Restaurante</a></li>
+                <li><a href="#">Zonas Comunes</a></li>
+                <li><a href="#">Testimonios</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        Copyright &copy; 2025 | Creado por J & J
+    </div>
+</footer>
+
 
 <script src="script.js"></script>
-
-
 
 </body>
 </html>
