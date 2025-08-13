@@ -28,3 +28,17 @@ if (botonsobrenosotros) {  // Solo si el botón existe
     });
 }
 
+window.cambiarImagen = function(miniatura) {
+    const imagenPrincipal = document.getElementById("imagenprincipal");
+    imagenPrincipal.src = miniatura.src;
+}
+
+window.cambiarImagen2 = function(miniatura2) {
+    const imagenPrincipal2 = document.getElementById("imagenprincipal2");
+    imagenPrincipal2.src = miniatura2.src;
+}
+
+window.cambiarImagen3 = function(miniatura3) {
+    const imagenPrincipal3 = document.getElementById("imagenprincipal3");
+    imagenPrincipal3.src = miniatura3.src;
+}

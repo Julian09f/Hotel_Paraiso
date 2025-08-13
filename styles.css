@@ -78,6 +78,7 @@ body {
 /* ======== Logo ======== */
 .logo img {
     height: 40px;                    /* Tamaño fijo de la imagen del logo */
+    margin-left: 100px;
 }
 
 /* ======== Botones ======== */
@@ -109,6 +110,7 @@ button:hover {
     font-size: 22px;
     cursor: pointer;
     padding: 5px;
+    margin-right: 100px;
 }
 
 /* Menú desplegable anclado al .acciones */
@@ -222,7 +224,8 @@ main {
     background-color: #f8f8f8;
     padding: 15px 0;
     border-top: 1px solid #ddd;
-    margin-top: auto; /* Lo mantiene abajo */
+    margin-top: 180px;
+    position: relative; /* Para que el footer se posicione al final del contenido */
 }
 
 .footer-container {
@@ -303,4 +306,107 @@ main {
     height: auto;
     border-radius: 8px;
     margin-top: 15px;
+}
+
+.h1-habitaciones {
+    text-align: left;
+    font-style: italic;
+    font-family: 'Arial, sans-serif';
+    margin-top: 250px; /* Para separarlo del header fijo */
+    margin-bottom: 20px;
+    margin-left: 130px;
+    color: #333;
+}
+
+.habitacion {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que en pantallas pequeñas se acomode */
+}
+
+.imagenes {
+    flex: 1 1 35%;
+}
+
+.imagenes .principal {
+    width: 400px;
+    height: 300px;
+    margin-top: 120px;
+    margin-left: 220px;
+    border-radius: 8px;
+}
+
+.miniaturas {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 255px;
+}
+
+.miniaturas img {
+    width: 100px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.miniaturas img:hover {
+    transform: scale(1.05);
+}
+
+.detalles {
+    flex: 1 1 40%;
+    margin-top: 100px;
+    margin-left: 110px;
+    margin-right: 200px;
+    color: #3d3d3de0;
+}
+
+.detalles h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detalles h2 span {
+    font-size: 24px;
+    color: #222;
+}
+
+.detalles small {
+    font-size: 12px;
+    color: gray;
+}
+
+.descripcion {
+    margin: 10px 0;
+    color: #555;
+}
+
+.detalles ul {
+    padding-left: 20px;
+    color: #555;
+}
+
+.reservar {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-left: 400px;
+    transition: background-color 0.3s;
+}
+
+.reservar:hover {
+    background-color: #f34949;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .habitacion {
+        flex-direction: column;
+    }
 }
