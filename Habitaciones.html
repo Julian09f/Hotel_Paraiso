@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Habitaciones - Hotel Paraíso</title>
+</head>
+<body>
+    <!-- Contenedor principal de la barra de navegación -->
+<header class="navbar">
+
+    <!-- Sección izquierda: Logo -->
+    <div class="logo">
+        <!-- Imagen del logo -->
+        <a href="index.html">
+            <img src="/images/LOGO HJ.png" alt="Hotel Paraíso"> 
+        </a>
+    </div>
+
+    <!-- Sección derecha: Botones + menú -->
+    <div class="acciones">
+
+        <button class="btn-sobre-nosotros">SOBRE NOSOTROS</button>
+        <button class="btn-login">INICIO DE SESIÓN</button>
+        <button class="btn-reserva">RESERVAR AHORA</button>
+        <!-- Icono del menú -->
+        <div class="menu-icon">☰</div>
+        <!-- Menú desplegable que aparece al dar click -->
+        <div class="menu-desplegable">
+        <a href="sobre-nosotros.html">Sobre Nosotros</a>
+        <a href="login.html">Inicio de Sesión</a>
+        <a href="reservas.html">Reservar Ahora</a>
+        </div>
+
+    </div>
+
+</header>
+
+    <h1 class="h1-habitaciones">Habitaciones</h1>
+
+    
+        <div class="habitacion">
+            <!-- Columna izquierda -->
+            <div class="imagenes">
+                <img id="imagenprincipal" class="principal" src="/images/habitacion-estandar.jpg" alt="Habitación estándar">
+                <div class="miniaturas">
+                    <img src="/images/habitacion-estandar.jpg" alt="Miniatura 1" onclick="cambiarImagen(this)">
+                    <img src="/images/habitacion-medium.jpg" alt="Miniatura 2" onclick="cambiarImagen(this)">
+                    <img src="/images/habitacion-lujosa.jpg" alt="Miniatura 3" onclick="cambiarImagen(this)">
+                </div>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="detalles">
+                <h2>ESTÁNDAR <span>$150.000 <small>/noche</small></span></h2>
+                <p class="descripcion">
+                    Ideal para viajeros prácticos que buscan comodidad y buen precio.
+                    Esta habitación ofrece un ambiente acogedor, funcional y bien equipado para una estadía tranquila.
+                </p>
+
+                <h4>Incluye:</h4>
+                <ul>
+                    <li>Cama sencilla o doble</li>
+                    <li>Baño privado con ducha</li>
+                    <li>TV por cable</li>
+                    <li>Escritorio de trabajo</li>
+                    <li>Aire acondicionado</li>
+                    <li>Wi-Fi gratuito</li>
+                </ul>
+
+                <h4>Servicios:</h4>
+                <ul>
+                    <li>Limpieza diaria</li>
+                    <li>Servicio a la habitación (limitado)</li>
+                    <li>Acceso a zonas comunes</li>
+                </ul>
+
+                <button onclick="location.href='reservas.html'" class="reservar">RESERVAR AHORA</button>
+            </div>
+        </div>
+
+        <div class="habitacion">
+            <!-- Columna izquierda -->
+            <div class="imagenes">
+                <img id="imagenprincipal2" class="principal" src="/images/habitacion-medium.jpg" alt="Habitación Medium">
+                <div class="miniaturas">
+                    <img src="/images/habitacion-estandar.jpg" alt="Miniatura 1" onclick="cambiarImagen2(this)">
+                    <img src="/images/habitacion-medium.jpg" alt="Miniatura 2" onclick="cambiarImagen2(this)">
+                    <img src="/images/habitacion-lujosa.jpg" alt="Miniatura 3" onclick="cambiarImagen2(this)">
+                </div>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="detalles">
+                <h2>MEDIUM <span>$300.000 <small>/noche</small></span></h2>
+                <p class="descripcion">
+                    Pensada para quienes desean un equilibrio entre confort y espacio. Cuenta con una decoración moderna,
+                    mayor amplitud y detalles que elevan la experiencia.
+                </p>
+
+                <h4>Incluye:</h4>
+                <ul>
+                    <li>Cama queen size</li>
+                    <li>Baño amplio con agua caliente y artículos de aseo premium</li>
+                    <li>Smart TV</li>
+                    <li>Minibar</li>
+                    <li>Escritorio y silla ergonómica</li>
+                    <li>Aire acondicionado</li>
+                    <li>Wi-Fi gratuito</li>
+                    <li>Caja de seguridad</li>
+                </ul>
+
+                <h4>Servicios:</h4>
+                <ul>
+                    <li>Servicio a la habitación 24/7</li>
+                    <li>Limpieza diaria</li>
+                    <li>Desayuno incluido</li>
+                    <li>Acceso a zona de coworking</li>
+                </ul>
+
+                <button onclick="location.href='reservas.html'" class="reservar">RESERVAR AHORA</button>
+            </div>
+        </div>
+
+        <div class="habitacion">
+            <!-- Columna izquierda -->
+            <div class="imagenes">
+                <img id="imagenprincipal3" class="principal" src="/images/habitacion-lujosa.jpg" alt="Habitación lujosa">
+                <div class="miniaturas">
+                    <img src="/images/habitacion-estandar.jpg" alt="Miniatura 1" onclick="cambiarImagen3(this)">
+                    <img src="/images/habitacion-medium.jpg" alt="Miniatura 2" onclick="cambiarImagen3(this)">
+                    <img src="/images/habitacion-lujosa.jpg" alt="Miniatura 3" onclick="cambiarImagen3(this)">
+                </div>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="detalles">
+                <h2>PREMIUM<span>$1.000.000 <small>/noche</small></span></h2>
+                <p class="descripcion">
+                    Una experiencia de lujo. Diseñada para huéspedes que buscan exclusividad, confort y atención personalizada.
+                    Cada detalle está pensado para ofrecer un descanso superior.
+                </p>
+
+                <h4>Incluye:</h4>
+                <ul>
+                    <li>Cama king size</li>
+                    <li>Baño tipo spa con tina o jacuzzi</li>
+                    <li>Ducha tipo lluvia</li>
+                    <li>Smart TV 55”</li>
+                    <li>Minibar surtido</li>
+                    <li>Cafetera premium</li>
+                    <li>Escritorio ejecutivo</li>
+                    <li>Aire acondicionado inteligente</li>
+                    <li>WiFi ultra rápido</li>
+                    <li>Balcón privado con vista</li>
+                    <li>Caja fuerte digital</li>
+                </ul>
+
+                <h4>Servicios:</h4>
+                <ul>
+                    <li>Desayuno gourmet en la habitación</li>
+                    <li>Room service personalizado</li>
+                    <li>Limpieza 2 veces al día</li>
+                    <li>Acceso a spa y gimnasio</li>
+                    <li>Servicio de lavandería express</li>
+                    <li>Parqueadero privado</li>
+                </ul>
+
+                <button onclick="location.href='reservas.html'" class="reservar">RESERVAR AHORA</button>
+            </div>
+        </div>
+
+    <footer class="footer">
+    <div class="footer-container">
+
+        <!-- Columna 1 -->
+        <div class="footer-section">
+            <img src="/images/LOGO HJ.png" alt="Hotel Paraíso" class="footer-logo">
+            <button class="footer-btn">CONTACTANOS</button>
+            <div class="social-icons">
+                <a href="#"><img src="/images/facebook-logo.png" alt="Facebook"></a>
+                <a href="#"><img src="/images/linkedin-logo.png" alt="LinkedIn"></a>
+                <a href="#"><img src="/images/youtube-logo.jpg" alt="YouTube"></a>
+                <a href="#"><img src="/images/instagram-logo.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="footer-section">
+            <a href="https://www.google.com/maps/place/Medell%C3%ADn,+Antioquia" target="_blank">
+                <img src="/images/mapa-logo.jpg" alt="Mapa ubicación" class="mapa-img">
+            </a>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="footer-section">
+            <ul>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="https://www.google.com/maps/place/Medell%C3%ADn,+Antioquia" target="_blank">Ubicación</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="footer-section">
+            <ul>
+                <li><a href="Habitaciones.html">Habitaciones</a></li>
+                <li><a href="#">Restaurante</a></li>
+                <li><a href="#">Zonas Comunes</a></li>
+                <li><a href="#">Testimonios</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        Copyright &copy; 2025 | Creado por J & J
+    </div>
+    </footer>
+</body>
+    <script src="/script.js"></script>
+</html>
