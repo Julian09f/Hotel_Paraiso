@@ -3,6 +3,13 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
 
+        /* Imagen de fondo */
+    background-image: url(); /* Cambia por la tuya */
+    background-size: cover;       /* Ajusta sin perder proporción */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-attachment: fixed; /* Efecto parallax */
+
 }
 
 /* Estilo para las imágenes dentro de habitaciones */
@@ -62,7 +69,7 @@ body {
 }
 
 
-/* ======== Barra de navegación ======== */
+                                            /* ======== Barra de navegación ======== */
 .navbar {
     display: flex;                  /* Coloca los elementos (logo, menú, acciones) en una misma fila */
     justify-content: space-between; /* Espacia los elementos: uno a la izquierda, uno al centro, uno a la derecha */
@@ -70,9 +77,8 @@ body {
     padding: 0px 20px;              /* Espacio interno arriba/abajo y a los lados */
     position: absolute;              /* La posiciona encima del contenido (sobre la imagen de fondo) */
     width: 100%;                     /* Ocupa todo el ancho de la página */
-    background: transparent;         /* Fondo transparente (como en tu diseño) */
+    background: transparent;         /* Fondo transparente */
     color: black;                    /* Color del texto y enlaces */
-    z-index: 1000;                    /* Asegura que quede por encima de otros elementos */
 }
 
 /* ======== Logo ======== */
@@ -144,14 +150,22 @@ header {
 }
 
 /* Da espacio al contenido para que no se esconda debajo del header fijo */
-main {
-    padding-top: 100px; /* Ajusta según la altura de tu header */
-}
 
+
+                                                    /* ======== Sección Sobre Nosotros ======== */
 .h1-sobre-nosotros {
     text-align: center; /* Centra el título */
     margin-top: 120px;   /* Espacio arriba */
     color: #006666;     /* Color del texto */
+}
+
+.p-sobre-nosotros {
+    max-width: 800px;   /* Ancho máximo del párrafo */
+    margin: 20px auto;  /* Centrado horizontal */
+    padding: 0 20px;    /* Espacio interno a los lados */
+    line-height: 1.6;   /* Mejora la legibilidad */
+    color: #333;        /* Color del texto */
+    font-weight: bold;
 }
 
 /* Contenedor general del formulario */
@@ -168,6 +182,7 @@ form {
     margin-bottom: 80px; /* Espacio debajo del formulario */
 }
 
+                                                    /**======== Formulario de Reserva ======== */
 
 /* Título del formulario */
 .h1-registro {
@@ -219,7 +234,7 @@ main {
 
 }
 
-/* ======== Footer ======== */
+                                                            /* ======== Footer ======== */
 .footer {
     background-color: #f8f8f8;
     padding: 15px 0;
@@ -308,39 +323,51 @@ main {
     margin-top: 15px;
 }
 
+                                                        /* ======== Sección Habitaciones ======== */
+
 .h1-habitaciones {
-    text-align: left;
-    font-style: italic;
-    font-family: 'Arial, sans-serif';
-    margin-top: 250px; /* Para separarlo del header fijo */
-    margin-bottom: 20px;
-    margin-left: 130px;
-    color: #333;
+    text-align: center;
+    margin-top: 100px; /* Espacio para el header fijo */
+    color: #006666;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 20px; /* Espacio debajo del título */
+}
+.habitacion {
+    display: flex; 
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding-right: 10px; /* Espacio a la derecha para evitar que el contenido se salga */
+    padding-bottom: 30px;        /* espacio antes de la línea */
+    border-bottom: 2px solid black; /* línea negra separadora */
+
 }
 
-.habitacion {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Para que en pantallas pequeñas se acomode */
+/* Quitar línea en la última habitación */
+.habitacion:last-of-type {
+    border-bottom: none;
 }
 
 .imagenes {
-    flex: 1 1 35%;
+    flex: 1 1 40%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .imagenes .principal {
-    width: 400px;
-    height: 300px;
-    margin-top: 120px;
-    margin-left: 220px;
-    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
 }
 
 .miniaturas {
     display: flex;
     gap: 10px;
     margin-top: 10px;
-    margin-left: 255px;
 }
 
 .miniaturas img {
@@ -355,26 +382,34 @@ main {
 }
 
 .detalles {
-    flex: 1 1 40%;
-    margin-top: 100px;
-    margin-left: 110px;
-    margin-right: 200px;
+    flex: 1 1 50%;
     color: #3d3d3de0;
 }
 
+/* Título y precio alineados como en la imagen */
 .detalles h2 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
+/* Precio grande */
 .detalles h2 span {
-    font-size: 24px;
-    color: #222;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.detalles small {
+/* Texto pequeño "/noche" */
+.detalles h2 small {
     font-size: 12px;
+    font-weight: normal;
     color: gray;
 }
 
@@ -388,16 +423,18 @@ main {
     color: #555;
 }
 
+/* Botón de reservar */
 .reservar {
     background-color: black;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
     cursor: pointer;
     border-radius: 20px;
-    margin-top: 15px;
-    margin-left: 400px;
     transition: background-color 0.3s;
+    font-weight: bold;
+    display: block;       /* Hace que sea un bloque */
+    margin-left: auto;    /* Empuja el botón hacia la derecha */
 }
 
 .reservar:hover {
@@ -408,5 +445,107 @@ main {
 @media (max-width: 768px) {
     .habitacion {
         flex-direction: column;
+        align-items: center;
     }
+    .detalles {
+        text-align: center;
+    }
+    .detalles h2 {
+        justify-content: center;
+    }
+    .reserva {
+        align-self: center;
+    }
+}
+
+                                                        /* ====== HERO / Banner de bienvenida ====== */
+/* Contenedor del hero con imagen de fondo de alta calidad */
+.hero {
+  position: relative;                 /* Necesario para posicionar overlay y contenido */
+  min-height: 70vh;                   /* Alto del banner (70% del alto de pantalla) */
+  display: flex;                      /* Habilita centrado */
+  align-items: center;                /* Centra vertical */
+  justify-content: center;            /* Centra horizontal */
+  text-align: center;                 /* Texto centrado */
+  color: #fff;                       /* Texto blanco para contraste */
+
+/* Imagen de fondo*/
+    background-image: url(/images/habitacion-noche.webp); 
+    background-size: cover;             /* cubre todo sin distorsión */
+    background-position: center;        /* Centrado de la imagen */
+    background-repeat: no-repeat;       /* Evita repetición */
+
+  /* Sutil mejora visual en pantallas de alta densidad (opcional, navegadores modernos) */
+  /* image-set selecciona la mejor resolución disponible automáticamente */
+background-image: image-set(
+    url(/images/habitacion-noche.webp) 1x,
+    url(/images/habitacion-noche.webp) 2x
+);
+}
+
+/* Capa oscura encima de la imagen para que el texto sea legible */
+.hero__overlay {
+position: absolute;
+  inset: 0;                           /* top/right/bottom/left: 0 */
+background: linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)
+);
+}
+
+/* Contenido del hero (título, texto, botón) */
+.hero__content {
+  position: relative;                 /* Para estar por encima del overlay */
+  max-width: 900px;                   /* Ancho máximo del bloque de texto */
+  padding: 0 20px;                    /* Respiro lateral en móviles */
+}
+
+/* Título principal */
+.hero__title {
+
+    font-size: clamp(32px, 5vw, 56px);  /* Escala fluida: móvil → desktop */
+    line-height: 1.1;
+    margin: 0 0 12px 0;
+    font-weight: 800;
+}
+
+/* Subtítulo */
+.hero__subtitle {
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.6;
+    margin: 0 auto 24px auto;
+    opacity: 0.95;                     /* Ligera transparencia */
+    font-weight: bold;              
+}
+
+/* Botón/CTA */
+.hero__cta {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 999px;               /* Pastilla elegante */
+    background: #000;                  /* Negro sólido (contraste con overlay) */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hero__cta:hover {
+    background-color: #f34949;          /* Color acento al hover */
+    transform: translateY(-1px);
+}
+
+/* Ajuste si tu header es fijo: da espacio para que el hero no quede tapado */
+header.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+body { 
+    /* Si tu header mide ~80–100px, compensa aquí.
+    Ajusta este valor a la altura real de tu header. */
+    padding-top: 90px; 
 }
