@@ -1,80 +1,23 @@
-/* Estilo general para el cuerpo */
+                                            /* Estilo general para el cuerpo */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f5f5f5;
-
-        /* Imagen de fondo */
-    background-image: url(); /* Cambia por la tuya */
-    background-size: cover;       /* Ajusta sin perder proporción */
-    background-position: center;  /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que se repita */
-    background-attachment: fixed; /* Efecto parallax */
+    margin: 0; /* AGREGAR: Elimina márgenes por defecto */
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: clamp(16px, 1.1vw, 18px);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    padding-top: 90px; 
 
 }
-
-/* Estilo para las imágenes dentro de habitaciones */
-#habitaciones img {
-    width: auto;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-/* Estilo para la lista de habitaciones*/
-#habitaciones ul {
-    list-style: none;         /* Quita los punticos de la lista */
-    padding: 0;
-    display: flex;            /* Coloca los elementos en fila */
-    gap: 20px;                /* Espacio entre las habitaciones */
-    flex-wrap: wrap;          /* Si no caben, bajan a la siguiente línea */
-    justify-content: center;  /* Centra las habitaciones */
-}
-
-#habitaciones li {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 250px; 
-    text-align: center;
-
-    display: flex; /* Permite alinear imagen y texto */
-    flex-direction: column; /* Coloca el contenido en columna */
-    justify-content: space-between; /* Espacio entre imagen y texto */
-    height: 270px; 
-}
-
-/* Estilo para el titulo de la sección habitaciones */
-#habitaciones h2 {
-    text-align: center;
-    margin-bottom: 20px; /* Espacio debajo del título */
-    color: #006666; 
-}
-
-/* Estilo general para los botones de la sección habitaciones */
-#habitaciones button {
-    margin-top: 10px;             /* Espacio hacia arriba para separarlo del texto */
-    padding: 8px 10px;            /* Relleno interno: 8px arriba/abajo, 16px a los lados */
-    background-color: #006666;    /* Color de fondo del botón */
-    color: white;                 /* Color del texto del botón */
-    border-radius: 6px;           /* Bordes redondeados del botón */
-    border: none;                 /* Sin borde */
-    font-weight: bold;          /* Texto en negrita */
-    cursor: pointer;          /* Cambia el cursor al pasar por encima */
-}
-
-/* Estilo cuando el usuario pasa el cursor sobre el botón */
-#habitaciones button:hover {
-    background-color: red;   /* Cambia el color de fondo al pasar el mouse */
-}
-
-
                                             /* ======== Barra de navegación ======== */
 .navbar {
     display: flex;                  /* Coloca los elementos (logo, menú, acciones) en una misma fila */
     justify-content: space-between; /* Espacia los elementos: uno a la izquierda, uno al centro, uno a la derecha */
     align-items: center;            /* Centra los elementos verticalmente */
-    padding: 0px 20px;              /* Espacio interno arriba/abajo y a los lados */
+    padding: 10px 20px;              /* Espacio interno arriba/abajo y a los lados */
     position: absolute;              /* La posiciona encima del contenido (sobre la imagen de fondo) */
     width: 100%;                     /* Ocupa todo el ancho de la página */
     background: transparent;         /* Fondo transparente */
@@ -121,7 +64,7 @@ button:hover {
 
 /* Menú desplegable anclado al .acciones */
 .menu-desplegable {
-    display: none;
+    display: none; 
     position: absolute;   /* Se ancla respecto a .acciones */
     top: calc(100% + 5px); /* Justo debajo del grupo de botones */
     right: 0;              /* Pegado a la derecha de .acciones */
@@ -130,6 +73,13 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 2000;
+    font-weight: bold;
+    list-style: none;         /* Quita los punticos de la lista */
+}
+
+.menu-lista {
+    margin: 0;                /* Quita márgenes */
+    padding: 0;               /* Quita relleno */
 }
 
 /* Mostrar menú al activar */
@@ -148,8 +98,6 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
     z-index: 1000;         /* Encima de todo */
 }
-
-/* Da espacio al contenido para que no se esconda debajo del header fijo */
 
 
                                                     /* ======== Sección Sobre Nosotros ======== */
@@ -229,18 +177,18 @@ html, body {
 main {
     flex: 1; /* Empuja el footer hacia abajo */
     padding-top: 100px; /* Espacio por el header fijo */
-    
-    
-
 }
 
                                                             /* ======== Footer ======== */
 .footer {
+    padding: 15px 0; /* Solo padding vertical */
+    width: 100vw; /* Ancho completo del viewport */
+    margin-left: calc(-50vw + 50%); /* Centrar respecto al viewport */
     background-color: #f8f8f8;
-    padding: 15px 0;
-    border-top: 1px solid #ddd;
+    border-top: 3px solid #ddd;
     margin-top: 180px;
-    position: relative; /* Para que el footer se posicione al final del contenido */
+    position: relative;
+    
 }
 
 .footer-container {
@@ -248,7 +196,8 @@ main {
     justify-content: space-around;
     flex-wrap: wrap;
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto; /* Centrar el contenido */
+    padding: 0 20px; /* Padding interno para el contenido */
     gap: 15px;
 }
 
@@ -461,13 +410,13 @@ main {
                                                         /* ====== HERO / Banner de bienvenida ====== */
 /* Contenedor del hero con imagen de fondo de alta calidad */
 .hero {
-  position: relative;                 /* Necesario para posicionar overlay y contenido */
-  min-height: 70vh;                   /* Alto del banner (70% del alto de pantalla) */
-  display: flex;                      /* Habilita centrado */
-  align-items: center;                /* Centra vertical */
-  justify-content: center;            /* Centra horizontal */
-  text-align: center;                 /* Texto centrado */
-  color: #fff;                       /* Texto blanco para contraste */
+    position: relative;                 /* Necesario para posicionar overlay y contenido */
+    min-height: 70vh;                   /* Alto del banner (70% del alto de pantalla) */
+    display: flex;                      /* Habilita centrado */
+    align-items: center;                /* Centra vertical */
+    justify-content: center;            /* Centra horizontal */
+    text-align: center;                 /* Texto centrado */
+    color: #fff;                      /* Texto blanco para contraste */
 
 /* Imagen de fondo*/
     background-image: url(/images/habitacion-noche.webp); 
@@ -502,7 +451,7 @@ background: linear-gradient(
 
 /* Título principal */
 .hero__title {
-
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(32px, 5vw, 56px);  /* Escala fluida: móvil → desktop */
     line-height: 1.1;
     margin: 0 0 12px 0;
@@ -544,8 +493,4 @@ header.navbar {
     right: 0;
 }
 
-body { 
-    /* Si tu header mide ~80–100px, compensa aquí.
-    Ajusta este valor a la altura real de tu header. */
-    padding-top: 90px; 
-}
+

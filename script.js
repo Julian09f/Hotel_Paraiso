@@ -42,3 +42,19 @@ window.cambiarImagen3 = function(miniatura3) {
     const imagenPrincipal3 = document.getElementById("imagenprincipal3");
     imagenPrincipal3.src = miniatura3.src;
 }
+
+// Seleccionar elementos
+const menuIcon = document.querySelector('.menu-icon');
+const menuDesplegable = document.querySelector('.menu-desplegable');
+
+// Evento para abrir/cerrar el menú
+menuIcon.addEventListener('click', () => {
+    menuDesplegable.classList.toggle('show');
+});
+
+// Cerrar el menú si se hace clic fuera
+document.addEventListener('click', (e) => {
+    if (!menuIcon.contains(e.target) && !menuDesplegable.contains(e.target)) {
+        menuDesplegable.classList.remove('show');
+    }
+});
