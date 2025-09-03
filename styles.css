@@ -494,3 +494,38 @@ header.navbar {
 }
 
 
+/* ==== Carrusel ==== */
+#carouselExample {
+  max-width: 900px;    /* ancho máximo en pantallas grandes */
+  margin: auto;        /* centra el carrusel */
+}
+
+#carouselExample img {
+  width: 100%;         /* ocupa el ancho disponible del carrusel */
+  height: 400px;       /* altura fija en pantallas grandes */
+  object-fit: cover;   /* recorta la imagen sin deformarla */
+  border-radius: 10px; /* opcional: esquinas redondeadas */
+}
+
+/* Responsive: en pantallas pequeñas reducimos la altura */
+@media (max-width: 768px) {
+  #carouselExample img {
+    height: 250px; /* más bajito en tablets/móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  #carouselExample img {
+    height: 180px; /* aún más pequeño en celulares */
+  }
+}
+
+/* Título de la sección de habitaciones */
+.titleh2 {
+    text-align: center;
+    margin-top: 80px; /* Espacio para el header fijo */
+    color: #006666;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 20px; /* Espacio debajo del título */
+}
