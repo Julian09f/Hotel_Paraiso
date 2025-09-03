@@ -8,66 +8,98 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <title>Reservas - Hotel Paraiso</title>
 </head>
 <body>
 
-    <div id="header"></div>
+<div id="header"></div>
 
-    <h1 class="h1-registro">Registro Cliente</h1>
+<h1 class="h1-registro">Registro Cliente</h1>
 
-    <section class="form-container">
+<section class="form-container">
 
-
-    <form>
+    <form class="row g-3">
     <!-- Campo: Nombre -->
-    <label for="nombre">Nombre: *</label>
+    <div class="col-md-6">
+      <label for="nombre" class="form-label">Nombre *</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
+
     <!-- Campo: Apellidos -->
-    <label for="apellidos">Apellidos: *</label>
-    <input type="text" id="nombre" name="nombre" required>
-    <input type="text" id="apellidos" name="apellidos" required>
+    <div class="col-md-6">
+        <label for="apellidos" class="form-label">Apellidos *</label>
+        <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+    </div>
+
     <!-- Campo: Tipo de documento (T.D) -->
-    <label for="tipo-documento">Tipo de Documento</label>
-    <!-- Campo: Documento -->
-    <label for="documento">Documento: *</label>
-        <select id="tipo-documento" name="tipo-documento">
-        <option value="cedula">Cédula de Ciudadanía</option>
-        <option value="extranjeria">Cédula de Extranjería</option>
-        <option value="pasaporte">Pasaporte</option>
-        <option value="ti">Tarjeta de Identidad</option>
+    <div class="col-md-6">
+        <label for="tipo-documento" class="form-label">Tipo de Documento</label>
+        <select id="tipo-documento" name="tipo-documento" class="form-select">
+            <option value="cedula">Cédula de Ciudadanía</option>
+            <option value="extranjeria">Cédula de Extranjería</option>
+            <option value="pasaporte">Pasaporte</option>
+            <option value="ti">Tarjeta de Identidad</option>
     </select>
-    <input type="text" id="documento" name="documento" required>
-    <!-- Campo: Pais -->
-    <label for="pais">País</label>
+    </div>
+
+    <!-- Campo: Documento -->
+    <div class="col-md-6">
+        <label for="documento" class="form-label">Documento *</label>
+        <input type="text" class="form-control" id="documento" name="documento" required>
+    </div>
+
+    <!-- Campo: País -->
+    <div class="col-md-6">
+        <label for="pais" class="form-label">País</label>
+        <select id="pais" name="pais" class="form-select">
+            <option value="colombia">Colombia</option>
+            <option value="venezuela">Venezuela</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="peru">Perú</option>
+        </select>
+    </div>
+
     <!-- Campo: Ciudad -->
-    <label for="ciudad">Ciudad</label>
-    <select id="pais" name="pais">
-        <option value="colombia">Colombia</option>
-        <option value="venezuela">Venezuela</option>
-        <option value="ecuador">Ecuador</option>
-        <option value="peru">Perú</option>
-    <input type="text" id="ciudad" name="ciudad" required>
-        <!-- Campo: Correo electrónico -->
-    <label for="correo">Correo Electrónico: *</label>
-        <!-- Campo: Teléfono móvil -->
-    <label for="telefono">Teléfono Móvil: *</label>
-    <input type="email" id="correo" name="correo" required>
-    <input type="tel" name="telefono" id="telefono" required>
+    <div class="col-md-6">
+        <label for="ciudad" class="form-label">Ciudad *</label>
+        <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+    </div>
 
-    <label>
-        <input type="checkbox" required>
-        Acepto <a href="#">Términos y condiciones generales</a>,
-        <a href="#">Política de privacidad</a> y <a href="#">condiciones de reserva</a>
-    </label>
+    <!-- Campo: Correo electrónico -->
+    <div class="col-md-6">
+        <label for="correo" class="form-label">Correo Electrónico *</label>
+        <input type="email" class="form-control" id="correo" name="correo" required>
+    </div>
 
-    <button class="btn-reservarFormulario" type="submit">Reservar</button>
-    
+    <!-- Campo: Teléfono móvil -->
+    <div class="col-md-6">
+        <label for="telefono" class="form-label">Teléfono Móvil *</label>
+        <input type="tel" class="form-control" id="telefono" name="telefono" required>
+    </div>
+
+    <!-- Términos -->
+    <div class="col-12">
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="terminos" required>
+        <label class="form-check-label" for="terminos">
+            Acepto <a href="#">Términos y condiciones generales</a>,
+            <a href="#">Política de privacidad</a> y 
+            <a href="#">condiciones de reserva</a>.
+        </label>
+    </div>
+    </div>
+
+    <!-- Botón -->
+    <div class="col-12 text-center">
+    <button class="btn btn-dark btn-lg" type="submit">Reservar</button>
+    </div>
     </form>
+</section>
 
-    </section>
+
 
 <div id="footer"></div>
 

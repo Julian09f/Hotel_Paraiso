@@ -140,33 +140,6 @@ form {
     color: #333;
 }
 
-/* Formulario en 2 columnas */
-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-/* Cada campo en columna */
-label {
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-input, select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-/* Casilla de términos y botón que ocupen las dos columnas */
-label[for="terminos"],
-button {
-    grid-column: span 2;
-}
-
 html, body {
     height: 100%;
     margin: 0;
