@@ -58,21 +58,16 @@ botonesReservaSeccion.forEach((boton) => {
     });
 });
 
-  // Cambiadores de imagen (si existen en la página actual)
-window.cambiarImagen = function(miniatura) {
-    const imagenPrincipal = document.getElementById("imagenprincipal");
-    if (imagenPrincipal) imagenPrincipal.src = miniatura.src;
-};
+// Cambiar imagen principal desde miniaturas (función única)
+document.querySelectorAll('.img-thumbnail').forEach(img => {
+  img.addEventListener('click', function() {
+    const targetId = this.dataset.target; // lee el id de la imagen principal
+    const imagenPrincipal = document.getElementById(targetId);
+    imagenPrincipal.src = this.src; // reemplaza la imagen
+  });
+});
 
-window.cambiarImagen2 = function(miniatura2) {
-    const imagenPrincipal2 = document.getElementById("imagenprincipal2");
-    if (imagenPrincipal2) imagenPrincipal2.src = miniatura2.src;
-};
 
-window.cambiarImagen3 = function(miniatura3) {
-    const imagenPrincipal3 = document.getElementById("imagenprincipal3");
-    if (imagenPrincipal3) imagenPrincipal3.src = miniatura3.src;
-};
 });
 
 
