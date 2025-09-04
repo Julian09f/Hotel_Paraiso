@@ -257,14 +257,14 @@ main {
 }
 .habitacion {
     margin-bottom: 50px;
-    padding-bottom: 40px;       /* Espacio debajo de cada habitación */
-    border-bottom: 3px solid black;
+    padding-bottom: 30px;      /* espacio antes de la línea */
+    border-bottom: 3px solid black; /* línea separadora */
 }
 
-.habitacion:last-child {
-    border-bottom: none;        /* Eliminar línea en la última */
+/* Quitar línea en la última habitación */
+.habitacion:last-of-type {
+    border-bottom: none;
 }
-
 
 
 .imagenes {
